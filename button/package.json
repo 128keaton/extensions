@@ -1,0 +1,11 @@
+{
+  "main": "../bundles/ng-matero-extensions-button.umd.js",
+  "module": "../fesm2015/ng-matero-extensions-button.js",
+  "es2015": "../fesm2015/ng-matero-extensions-button.js",
+  "esm2015": "../esm2015/button/ng-matero-extensions-button.js",
+  "fesm2015": "../fesm2015/ng-matero-extensions-button.js",
+  "typings": "ng-matero-extensions-button.d.ts",
+  "metadata": "ng-matero-extensions-button.metadata.json",
+  "sideEffects": false,
+  "name": "@ng-matero/extensions/button"
+}

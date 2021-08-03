@@ -1,0 +1,27 @@
+/**
+ * Throws an exception for the case when popover trigger doesn't have a valid mtx-popover instance
+ */
+export function throwMtxPopoverMissingError() {
+    throw Error(`mtx-popover-trigger: must pass in an mtx-popover instance.
+
+    Example:
+      <mtx-popover #popover="mtxPopover"></mtx-popover>
+      <button [mtxPopoverTriggerFor]="popover"></button>`);
+}
+/**
+ * Throws an exception for the case when popover's mtxPopoverPositionX value isn't valid.
+ * In other words, it doesn't match 'before' or 'after'.
+ */
+export function throwMtxPopoverInvalidPositionX() {
+    throw Error(`mtxPopoverPositionX value must be either 'before', 'center' or after'.
+      Example: <mtx-popover mtxPopoverPositionX="before" #popover="mtxPopover"></mtx-popover>`);
+}
+/**
+ * Throws an exception for the case when popover's mtxPopoverPositionY value isn't valid.
+ * In other words, it doesn't match 'above' or 'below'.
+ */
+export function throwMtxPopoverInvalidPositionY() {
+    throw Error(`mtxPopoverPositionY value must be either 'above' or below'.
+      Example: <mtx-popover mtxPopoverPositionY="above" #popover="mtxPopover"></mtx-popover>`);
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicG9wb3Zlci1lcnJvcnMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi9wcm9qZWN0cy9leHRlbnNpb25zL3BvcG92ZXIvcG9wb3Zlci1lcnJvcnMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7QUFDSCxNQUFNLFVBQVUsMkJBQTJCO0lBQ3pDLE1BQU0sS0FBSyxDQUFDOzs7O3lEQUkyQyxDQUFDLENBQUM7QUFDM0QsQ0FBQztBQUVEOzs7R0FHRztBQUNILE1BQU0sVUFBVSwrQkFBK0I7SUFDN0MsTUFBTSxLQUFLLENBQUM7OEZBQ2dGLENBQUMsQ0FBQztBQUNoRyxDQUFDO0FBRUQ7OztHQUdHO0FBQ0gsTUFBTSxVQUFVLCtCQUErQjtJQUM3QyxNQUFNLEtBQUssQ0FBQzs2RkFDK0UsQ0FBQyxDQUFDO0FBQy9GLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcclxuICogVGhyb3dzIGFuIGV4Y2VwdGlvbiBmb3IgdGhlIGNhc2Ugd2hlbiBwb3BvdmVyIHRyaWdnZXIgZG9lc24ndCBoYXZlIGEgdmFsaWQgbXR4LXBvcG92ZXIgaW5zdGFuY2VcclxuICovXHJcbmV4cG9ydCBmdW5jdGlvbiB0aHJvd010eFBvcG92ZXJNaXNzaW5nRXJyb3IoKSB7XHJcbiAgdGhyb3cgRXJyb3IoYG10eC1wb3BvdmVyLXRyaWdnZXI6IG11c3QgcGFzcyBpbiBhbiBtdHgtcG9wb3ZlciBpbnN0YW5jZS5cclxuXHJcbiAgICBFeGFtcGxlOlxyXG4gICAgICA8bXR4LXBvcG92ZXIgI3BvcG92ZXI9XCJtdHhQb3BvdmVyXCI+PC9tdHgtcG9wb3Zlcj5cclxuICAgICAgPGJ1dHRvbiBbbXR4UG9wb3ZlclRyaWdnZXJGb3JdPVwicG9wb3ZlclwiPjwvYnV0dG9uPmApO1xyXG59XHJcblxyXG4vKipcclxuICogVGhyb3dzIGFuIGV4Y2VwdGlvbiBmb3IgdGhlIGNhc2Ugd2hlbiBwb3BvdmVyJ3MgbXR4UG9wb3ZlclBvc2l0aW9uWCB2YWx1ZSBpc24ndCB2YWxpZC5cclxuICogSW4gb3RoZXIgd29yZHMsIGl0IGRvZXNuJ3QgbWF0Y2ggJ2JlZm9yZScgb3IgJ2FmdGVyJy5cclxuICovXHJcbmV4cG9ydCBmdW5jdGlvbiB0aHJvd010eFBvcG92ZXJJbnZhbGlkUG9zaXRpb25YKCkge1xyXG4gIHRocm93IEVycm9yKGBtdHhQb3BvdmVyUG9zaXRpb25YIHZhbHVlIG11c3QgYmUgZWl0aGVyICdiZWZvcmUnLCAnY2VudGVyJyBvciBhZnRlcicuXHJcbiAgICAgIEV4YW1wbGU6IDxtdHgtcG9wb3ZlciBtdHhQb3BvdmVyUG9zaXRpb25YPVwiYmVmb3JlXCIgI3BvcG92ZXI9XCJtdHhQb3BvdmVyXCI+PC9tdHgtcG9wb3Zlcj5gKTtcclxufVxyXG5cclxuLyoqXHJcbiAqIFRocm93cyBhbiBleGNlcHRpb24gZm9yIHRoZSBjYXNlIHdoZW4gcG9wb3ZlcidzIG10eFBvcG92ZXJQb3NpdGlvblkgdmFsdWUgaXNuJ3QgdmFsaWQuXHJcbiAqIEluIG90aGVyIHdvcmRzLCBpdCBkb2Vzbid0IG1hdGNoICdhYm92ZScgb3IgJ2JlbG93Jy5cclxuICovXHJcbmV4cG9ydCBmdW5jdGlvbiB0aHJvd010eFBvcG92ZXJJbnZhbGlkUG9zaXRpb25ZKCkge1xyXG4gIHRocm93IEVycm9yKGBtdHhQb3BvdmVyUG9zaXRpb25ZIHZhbHVlIG11c3QgYmUgZWl0aGVyICdhYm92ZScgb3IgYmVsb3cnLlxyXG4gICAgICBFeGFtcGxlOiA8bXR4LXBvcG92ZXIgbXR4UG9wb3ZlclBvc2l0aW9uWT1cImFib3ZlXCIgI3BvcG92ZXI9XCJtdHhQb3BvdmVyXCI+PC9tdHgtcG9wb3Zlcj5gKTtcclxufVxyXG4iXX0=
